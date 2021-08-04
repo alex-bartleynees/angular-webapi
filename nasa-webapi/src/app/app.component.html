@@ -1,0 +1,6 @@
+<h1>Amazing Space Photos!</h1>
+<button (click)="getImage()">Click me!</button>
+<div *ngIf="image.length >= 1">
+  <p>{{ image[0].explanation }}</p>
+  <img src="{{ image[0].url }}" alt="" />
+</div>
