@@ -1,6 +1,7 @@
-<h1>Amazing Space Photos!</h1>
-<button (click)="getImage()">Click me!</button>
-<div *ngIf="image.length >= 1">
+<h1 class="heading-primary">Amazing Space Photos!</h1>
+<div class="content" *ngIf="image.length >= 1">
+  <img class="image" src="{{ image[0].url }}" alt="space image" />
   <p>{{ image[0].explanation }}</p>
-  <img src="{{ image[0].url }}" alt="" />
 </div>
+<app-button color="green" text="Click Me!" (btnClick)="getImage()">
+</app-button>
